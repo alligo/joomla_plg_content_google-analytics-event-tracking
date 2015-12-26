@@ -5,78 +5,25 @@
   group="system"
   method="upgrade"
 >
-  <name>PLG_SYSTEM_ALLIGOVARNISH</name>
+  <name>PLG_CONTENT_GOOGLE-ANALYTICS-EVENT-TRACKING</name>
   <author>Emerson Rocha Luiz</author>
-  <creationDate>2015-12-20</creationDate>
+  <creationDate>2015-12-26</creationDate>
   <copyright>Copyright (C) 2015 Alligo Ltda. All rights reserved.</copyright>
-  <license>GNU General Public License version 3. See license.txt</license>
+  <license>MIT</license>
   <authorEmail>emerson@alligo.com.br</authorEmail>
   <authorUrl>http://fititnt.org</authorUrl>
   <version>1.0.0beta</version>
-  <description>PLG_SYSTEM_ALLIGOVARNISH_XML_DESCRIPTION</description>
+  <description>PLG_CONTENT_GOOGLE-ANALYTICS-EVENT-TRACKING_XML_DESCRIPTION</description>
   <files>
-    <filename plugin="alligovarnish">alligovarnish.php</filename>
-    <filename>index.html</filename>
+    <filename plugin="google-analytics-event-tracking">google-analytics-event-tracking.php</filename>
   </files>
   <languages folder="language">
-    <language tag="en-GB">en-GB/en-GB.plg_system_alligovarnish.ini</language>
-    <language tag="en-GB">en-GB/en-GB.plg_system_alligovarnish.sys.ini</language>
-    <language tag="pt-BR">pt-BR/pt-BR.plg_system_alligovarnish.ini</language>
-    <language tag="pt-BR">pt-BR/pt-BR.plg_system_alligovarnish.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_google-analytics-event-tracking.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_google-analytics-event-tracking.sys.ini</language>
   </languages>
   <config>
     <fields name="params">
       <fieldset name="basic">
-        <field name="varnishtime"
-               type="text"
-               default="300s"
-               label="PLG_SYSTEM_ALLIGOVARNISH_VARNISHTIME"
-               description="PLG_SYSTEM_ALLIGOVARNISH_VARNISHTIME_DESC"
-               size="4" />
-        <field name="browsertime"
-               type="text"
-               default="300s"
-               label="PLG_SYSTEM_ALLIGOVARNISH_BROWSERTIME"
-               description="PLG_SYSTEM_ALLIGOVARNISH_BROWSERTIME_DESC"
-               size="4" />
-        <field
-          name="exptproxy"
-          type="textarea"
-          default=""
-          hint="MenuID:CacheTime\n101:120s\n102:2m\n103:3h"
-          label="PLG_SYSTEM_ALLIGOVARNISH_EXTPROXY"
-          description="PLG_SYSTEM_ALLIGOVARNISH_EXTPROXY_DESC"
-          rows="10"
-          cols="5"
-        />
-        <field
-          name="exptbrowser"
-          type="textarea"
-          default=""
-          hint="MenuID:CacheTime\n101:120s\n102:2m\n103:3h"
-          label="PLG_SYSTEM_ALLIGOVARNISH_BROWSER"
-          description="PLG_SYSTEM_ALLIGOVARNISH_BROWSER_DESC"
-          rows="10"
-          cols="5"
-        />
-        <field name="extrainfo" type="radio"
-               class="btn-group btn-group-yesno"
-               default="0"
-               label="PLG_SYSTEM_ALLIGOVARNISH_EXTRAINFO"
-               description="PLG_SYSTEM_ALLIGOVARNISH_EXTRAINFO_DESC"
-        >
-          <option value="1">JYES</option>
-          <option value="0">JNO</option>
-        </field>
-        <field name="debug" type="radio"
-               class="btn-group btn-group-yesno"
-               default="0"
-               label="PLG_SYSTEM_ALLIGOVARNISH_DEBUG"
-               description="PLG_SYSTEM_ALLIGOVARNISH_DEBUG_DESC"
-        >
-          <option value="1">JYES</option>
-          <option value="0">JNO</option>
-        </field>
       </fieldset>
     </fields>
   </config>
