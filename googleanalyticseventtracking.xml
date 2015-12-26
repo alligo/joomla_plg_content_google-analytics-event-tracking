@@ -24,6 +24,9 @@
     <language tag="en-GB">en-GB/en-GB.plg_content_googleanalyticseventtracking.ini</language>
     <language tag="en-GB">en-GB/en-GB.plg_content_googleanalyticseventtracking.sys.ini</language>
   </languages>
+  <media destination="alligo" folder="media">
+   <folder>js</folder>
+  </media>
   <config>
     <fields name="params">
       <fieldset name="basic">
