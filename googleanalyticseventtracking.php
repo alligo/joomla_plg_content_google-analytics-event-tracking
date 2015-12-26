@@ -32,18 +32,21 @@ class PlgContentGoogleAnalyticsEventTracking extends JPlugin
 	public function onContentBeforeDisplay($context, &$article, &$params, $limitstart)
 	{
 
-        $input = JFactory::getApplication()->input;
-        if ($input->get('view') !== 'article') {
-            // Only for article view. Not home, featured, category, etc
+        // Only for article view. Not home, featured, category, etc
+        if ($context !== 'com_content.article') {
             return '';
         }
 
         // Load jQuery from Joomla Framework
         JHtml::_('jquery.framework');
-        JFactory::getDocument()->addScript(JUri::base(true) . '/media/alligo/js/gaet.min.js');
-        //var_dump($input->get('view'));
+        //JFactory::getDocument()->addScript(JUri::base(true) . '/media/alligo/js/gaet.min.js', null, true, true);
 
-        //var_dump($context, $article, $params);
+        // @todo Olhar melhor a estratégia de sobrepor js/css (fititnt, 2015-12-26 19:11)
+        // @see http://joomla.stackexchange.com/questions/3861/best-way-to-include-css-js-files-in-my-custom-extension
+        // @see https://www.babdev.com/blog/139-use-the-media-folder-allow-overridable-media
+        // @see hhttps://docs.joomla.org/Understanding_Output_Overrides#Media_Files_Override
+        // Protip: You can override this file, placing a copy on /templates/yourtemplate/js/alligo/gaet.min.js
+        JHtml::script('alligo/gaet.min.js', false, true, false);
 
         $html = '<span data-ga-event="ready"';
         $html .= ' data-ga-category="' . $article->parent_route .'"';
