@@ -2,10 +2,10 @@
 <extension
   version="3.4"
   type="plugin"
-  group="system"
+  group="content"
   method="upgrade"
 >
-  <name>PLG_CONTENT_GOOGLE-ANALYTICS-EVENT-TRACKING</name>
+  <name>PLG_CONTENT_GOOGLEANALYTICSEVENTTRACKING</name>
   <author>Emerson Rocha Luiz</author>
   <creationDate>2015-12-26</creationDate>
   <copyright>Copyright (C) 2015 Alligo Ltda. All rights reserved.</copyright>
@@ -13,13 +13,16 @@
   <authorEmail>emerson@alligo.com.br</authorEmail>
   <authorUrl>http://fititnt.org</authorUrl>
   <version>1.0.0beta</version>
-  <description>PLG_CONTENT_GOOGLE-ANALYTICS-EVENT-TRACKING_XML_DESCRIPTION</description>
+  <description>PLG_CONTENT_GOOGLEANALYTICSEVENTTRACKING_XML_DESCRIPTION</description>
   <files>
-    <filename plugin="google-analytics-event-tracking">google-analytics-event-tracking.php</filename>
+    <filename plugin="googleanalyticseventtracking">googleanalyticseventtracking.php</filename>
+    <folder>language</folder>
+    <filename>LICENSE</filename>
+    <filename>README.md</filename>
   </files>
   <languages folder="language">
-    <language tag="en-GB">en-GB/en-GB.plg_content_google-analytics-event-tracking.ini</language>
-    <language tag="en-GB">en-GB/en-GB.plg_content_google-analytics-event-tracking.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_googleanalyticseventtracking.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_googleanalyticseventtracking.sys.ini</language>
   </languages>
   <config>
     <fields name="params">

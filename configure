@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Internal use. Just to symlink files to a test site
+# Need fist that extension already beem installed, so will remove
+# files and folders and just create symbolic links to repository
+
+
+if [ ! -d "/alligo/code/" ]; then
+  # Este script nao deveria estar sendo executado. Você por acaso fez
+  # upload da pasta inteira?
+  exit
+fi
